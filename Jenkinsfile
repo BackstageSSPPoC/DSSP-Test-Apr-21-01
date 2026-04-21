@@ -294,7 +294,6 @@ pipeline {
         DOCKER_TAG = "1.0.${BUILD_NUMBER}"
         IMAGE_TAG = "${DOCKER_IMAGE}:${DOCKER_TAG}"
         GITOPS_REPO = "https://github.com/BackstageSSPPoC/k8s-manifests.git"
-        RUN_MODE = "ci"
     }
     
     stages {
