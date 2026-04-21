@@ -319,6 +319,9 @@ pipeline {
                     // ✅ ANY OTHER BRANCH → CI ONLY
                     else {
                         echo "Non-main branch → CI only"
+                        echo "BRANCH_NAME: ${env.BRANCH_NAME}"
+                        echo "GIT_BRANCH: ${env.GIT_BRANCH}"
+                        echo "GIT_LOCAL_BRANCH: ${env.GIT_LOCAL_BRANCH}"
                         env.RUN_MODE = "ci"
                     }
                 }
