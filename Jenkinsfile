@@ -312,7 +312,7 @@ pipeline {
                     echo "Branch: ${env.BRANCH_NAME}"
     
                     // ✅ MAIN → CI + CD
-                    if (env.BRANCH_NAME == "main") {
+                    if (env.BRANCH_NAME == "main" || env.BRANCH_NAME.endsWith("/main") || env.GIT_BRANCH?.endsWith("main")) {
                         echo "Main branch detected → CI + CD"
                         env.RUN_MODE = "cd"
                     } 
